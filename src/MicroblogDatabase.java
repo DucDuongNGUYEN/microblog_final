@@ -57,13 +57,13 @@ public class MicroblogDatabase {
     public static void main(String[] args) {
         try {
             MicroblogDatabase db = new MicroblogDatabase();
-            /*
+/*
             db.insertUser("john", "password123");
             db.insertMessage("john", "Hello World!");
-             */
+*/
             db.selectAllMessages();
 
-            //db.close();
+            db.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
