@@ -2,7 +2,7 @@ import java.sql.*;
 
 public class MicroblogDatabase {
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String DB_URL = "jdbc:mysql://localhost/db_microblog";
+    private static final String DB_URL = "jdbc:mysql://localhost:3307/db_microblog";
     private static final String USER = "root";
     private static final String PASS = "";
 
@@ -57,10 +57,13 @@ public class MicroblogDatabase {
     public static void main(String[] args) {
         try {
             MicroblogDatabase db = new MicroblogDatabase();
+            /*
             db.insertUser("john", "password123");
             db.insertMessage("john", "Hello World!");
+             */
             db.selectAllMessages();
-            db.close();
+
+            //db.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
